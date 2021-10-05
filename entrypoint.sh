@@ -6,6 +6,10 @@ pwd
 
 ls
 
+ls /
+
+ls /app
+
 
 
 # cd dist
