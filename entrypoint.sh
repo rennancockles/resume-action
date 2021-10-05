@@ -2,7 +2,10 @@
 
 # yarn build
 
+echo Verificando diretorio inicial
 pwd
+ls
+echo $INPUT_DIRECTORY
 echo Entrando no diretorio
 cd /app
 echo Verificando diretorio atual
