@@ -27,6 +27,7 @@ else
 fi
 
 rm -rf ./*
+
 ls
 echo '------------------------------'
 git status -s
