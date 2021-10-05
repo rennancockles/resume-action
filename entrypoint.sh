@@ -14,6 +14,9 @@ yarn build
 cd /github/workspace
 
 git checkout --orphan gh-pages
+git config --global user.email r3ck.dev@gmail.com
+git config --global user.name "Rennan Cockles"
+
 cp -r /app/dist/* ./
 
 if [ $INPUT_CNAME ] ; then
