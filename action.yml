@@ -1,0 +1,21 @@
+name: 'Resume Template'
+author: Rennan Cockles <r3ck.dev@gmail.com>
+description: 'Creates a resume and hosts with github pages'
+inputs:
+  directory:
+    description: 'Directory to search for resume data files.'
+    required: true
+    default: 'data'
+  token:
+    description: Token for the repo. Can be passed in using {{ secrets.GITHUB_TOKEN }}
+    required: true
+  debug:
+    description: Use debug=True to enable more logging.
+    required: false
+    default: 'false'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'file-text'
+  color: 'purple'
