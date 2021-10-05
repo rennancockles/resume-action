@@ -16,3 +16,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           directory: 'data'
+          cname: 'test.r3ck.com.br'
