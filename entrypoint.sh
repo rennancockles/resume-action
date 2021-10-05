@@ -13,31 +13,45 @@ yarn build
 
 cd /github/workspace
 
-git checkout --orphan gh-pages
 git config --global user.email r3ck.dev@gmail.com
 git config --global user.name "Rennan Cockles"
+git checkout --orphan gh-pages
 
-cp -r /app/dist/* ./
 
-if [ $INPUT_CNAME ] ; then
-  echo "Writing CNAME to file: $INPUT_CNAME"
-  echo $INPUT_CNAME > CNAME
-else
-  echo "Skipping CNAME not provided"
-fi
-
-rm -rf ./*
-
+echo '------------|||---------------'
 ls
 echo '------------------------------'
 git status -s
+echo '------------|||---------------'
+
+rm -rf ./*
+
+echo '------------|||---------------'
+ls
 echo '------------------------------'
 git status -s
-echo '------------------------------'
+echo '------------|||---------------'
 
-git add .
-git commit -m "Publishing Resume ($GITHUB_RUN_NUMBER)."
-git push origin gh-pages -f
+git rm --cached .
+
+echo '------------|||---------------'
+ls
+echo '------------------------------'
+git status -s
+echo '------------|||---------------'
+
+# cp -r /app/dist/* ./
+
+# if [ $INPUT_CNAME ] ; then
+#   echo "Writing CNAME to file: $INPUT_CNAME"
+#   echo $INPUT_CNAME > CNAME
+# else
+#   echo "Skipping CNAME not provided"
+# fi
+
+# git add .
+# git commit -m "Publishing Resume ($GITHUB_RUN_NUMBER)."
+# git push origin gh-pages -f
 
 
 # git init
