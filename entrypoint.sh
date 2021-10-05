@@ -16,23 +16,8 @@ cd /github/workspace
 git config --global user.email r3ck.dev@gmail.com
 git config --global user.name "Rennan Cockles"
 git checkout --orphan gh-pages
-
-
-echo '------------|||---------------'
-ls
-echo '------------------------------'
-git status -s
-echo '------------|||---------------'
-
-rm -rf ./*
-
-echo '------------|||---------------'
-ls
-echo '------------------------------'
-git status -s
-echo '------------|||---------------'
-
 git rm -rf .
+# rm -rf ./*
 
 echo '------------|||---------------'
 ls
