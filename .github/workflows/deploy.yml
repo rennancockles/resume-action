@@ -1,0 +1,16 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  resume-action:
+    runs-on: ubuntu-latest
+    name: Resume Action Job
+    steps:
+      - name: Resume Action Step
+        id: resume-step
+        uses: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          directory: 'data'
