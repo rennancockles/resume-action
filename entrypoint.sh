@@ -26,7 +26,8 @@ else
   echo "Skipping CNAME not provided"
 fi
 
-rm -rf ./
+git status
+rm -rf ./*
 git add .
 git commit -m "Publishing Resume ($GITHUB_RUN_NUMBER)."
 git push origin gh-pages -f
