@@ -6,6 +6,9 @@ inputs:
     description: 'Directory to search for resume data files.'
     required: true
     default: 'data'
+  cname:
+    description: 'Domain name to use with github pages.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
