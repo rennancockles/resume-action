@@ -2,12 +2,18 @@
 
 # yarn build
 
+pwd
 echo Entrando no diretorio
 cd /app
 echo Verificando diretorio atual
+pwd
 ls
-echo Verificando /src/data
-ls ./src/data
+echo Verificando /app/src
+cd /app/src
+pwd
+ls /app/src
+echo Verificando /app/src/data
+ls /app/src/data
 
 
 # cd dist
