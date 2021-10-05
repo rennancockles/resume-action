@@ -2,6 +2,14 @@
 
 # yarn build
 
+
+if [ -d $INPUT_DIRECTORY ] ; then
+  cp $INPUT_DIRECTORY/* /app/src/data
+else
+  echo "$INPUT_DIRECTORY is not a valid directory"
+  exit 1
+fi
+
 echo Verificando diretorio inicial
 pwd
 ls

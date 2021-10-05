@@ -6,7 +6,7 @@ RUN apk update && apk add git
 
 WORKDIR /app
 
-COPY ${INPUT_DIRECTORY} ./src/data/
+# COPY ${INPUT_DIRECTORY} ./src/data/
 
 COPY entrypoint.sh .
 
