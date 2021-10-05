@@ -1,0 +1,54 @@
+{
+  "name": "Test Resume Template",
+  "title": "using github actions",
+  "summary":"Teste de deploy do resume-template utilizando o github actions",
+  "education": [
+    {
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "title": "",
+      "org": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "remote": false,
+      "employer": "",
+      "position": "",
+      "description": ""
+    }
+  ],
+  "contact": {
+    "address": {
+      "line1": "",
+      "line2": ""
+    },
+    "phone": {
+      "number": "",
+      "whatsapp": false
+    },
+    "email": "",
+    "site": "",
+    "linkedin": "",
+    "github": ""
+  },
+  "languages": [
+    {
+      "language": "",
+      "level": ""
+    }
+  ],
+  "certifications": [
+    {
+      "date": "",
+      "org": "",
+      "name": "",
+      "url": ""
+    }
+  ]
+}
+
