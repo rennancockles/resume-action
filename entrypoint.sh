@@ -11,10 +11,11 @@ cd /app
 
 yarn build
 
-cd /github/workspace
-
+git config --global --add safe.directory /github/workspace
 git config --global user.email r3ck.dev@gmail.com
 git config --global user.name "Rennan Cockles"
+
+cd /github/workspace
 
 git checkout --orphan gh-pages
 git rm -rf .
