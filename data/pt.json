@@ -16,7 +16,7 @@
       "startDate": "",
       "endDate": "",
       "location": "",
-      "remote": false,
+      "remote": true,
       "employer": "",
       "position": "",
       "description": ""
