@@ -5,11 +5,12 @@ if [[ ! -f $INPUT_RESUME_FILE ]] ; then
   exit 1
 fi
 
+filename=$(basename "$INPUT_RESUME_FILE")
 cp $INPUT_RESUME_FILE /app
 
 cd /app
 
-/app/.venv/bin/python resume_generator /app/$INPUT_RESUME_FILE
+/app/.venv/bin/python resume_generator /app/$filename
 
 git config --global --add safe.directory /github/workspace
 git config --global user.email r3ck.dev@gmail.com
