@@ -14,39 +14,30 @@ name: Resume Template
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   resume-template:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Resume Template Action
-        uses: rennancockles/resume-action@v1
+        uses: rennancockles/resume-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          directory: 'data'
+          resume_file: 'data.json'
           cname: 'resume.mycustomdomain.com'
 ```
 
 This example uses the defaults configurations.
 
-It will run for each push to master branch, create a resume with the data provided and push to `gh-pages` branch.
-
-## Supported Languages
-
-The supported languages, along with their codes, are listed in the table below:
-
-| Language  | Code |
-| :---:     |     :---:   |
-| Portuguese  | `pt`  |
-| English  | `en` |
+It will run for each push to main branch, create a resume with the data provided and push to `gh-pages` branch.
 
 ## Resume Data Template
 
-Create a folder called `data` and create a file named <language_code>.json inside it (replace <language_code> for the code of the language of your choice). Copy the template below and paste on the json file. Fill it in with your data.
+Create a JSON file following the template below and fill it in with your data.
 
 ```json
 {
@@ -55,22 +46,23 @@ Create a folder called `data` and create a file named <language_code>.json insid
   "summary":"",
   "education": [
     {
-      "startDate": "",
-      "endDate": "",
+      "start_date": "",
+      "end_date": "",
       "location": "",
       "title": "",
-      "org": ""
+      "institution": ""
     }
   ],
-  "workExperience": [
+  "work_experience": [
     {
-      "startDate": "",
-      "endDate": "",
+      "start_date": "",
+      "end_date": "",
       "location": "",
       "remote": false,
-      "employer": "",
-      "position": "",
-      "description": ""
+      "company": "",
+      "title": "",
+      "description": "",
+      "tools": []
     }
   ],
   "contact": {
@@ -83,22 +75,21 @@ Create a folder called `data` and create a file named <language_code>.json insid
       "whatsapp": false
     },
     "email": "",
-    "site": "",
+    "website": "",
     "linkedin": "",
     "github": ""
   },
   "languages": [
     {
       "language": "",
-      "level": ""
+      "level": "Basic"
     }
   ],
-  "certifications": [
+  "certifications": [],
+  "skills": [
     {
-      "date": "",
-      "org": "",
       "name": "",
-      "url": ""
+      "years": 0
     }
   ]
 }
@@ -110,7 +101,7 @@ The inputs, along with their descriptions and usage contexts, are listed in the 
 
 | Input  | Description | Usage |
 | :---:     |     :---:   |    :---:   |
-| `directory`  | Directory to search for resume data files  | *Required* |
+| `resume_file`  | Json file with resume data  | *Required* |
 | `cname`  | Custom domain name to use with github pages | Optional
 
 ## License

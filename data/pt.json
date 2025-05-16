@@ -4,22 +4,23 @@
   "summary":"Teste de deploy do resume-template utilizando o github actions",
   "education": [
     {
-      "startDate": "",
-      "endDate": "",
+      "start_date": "",
+      "end_date": "",
       "location": "",
       "title": "",
-      "org": ""
+      "institution": ""
     }
   ],
-  "workExperience": [
+  "work_experience": [
     {
-      "startDate": "",
-      "endDate": "",
+      "start_date": "",
+      "end_date": "",
       "location": "",
-      "remote": true,
-      "employer": "",
-      "position": "",
-      "description": ""
+      "remote": false,
+      "company": "",
+      "title": "",
+      "description": "",
+      "tools": []
     }
   ],
   "contact": {
@@ -32,23 +33,21 @@
       "whatsapp": false
     },
     "email": "",
-    "site": "",
+    "website": "",
     "linkedin": "",
     "github": ""
   },
   "languages": [
     {
       "language": "",
-      "level": ""
+      "level": "Basic"
     }
   ],
-  "certifications": [
+  "certifications": [],
+  "skills": [
     {
-      "date": "",
-      "org": "",
       "name": "",
-      "url": ""
+      "years": 0
     }
   ]
 }
-

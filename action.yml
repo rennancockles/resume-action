@@ -2,10 +2,9 @@ name: 'Resume Template'
 author: Rennan Cockles <r3ck.dev@gmail.com>
 description: 'Creates a resume and hosts with github pages'
 inputs:
-  directory:
-    description: 'Directory to search for resume data files.'
+  resume_file:
+    description: 'Json file with resume data.'
     required: true
-    default: 'data'
   cname:
     description: 'Domain name to use with github pages.'
     required: false

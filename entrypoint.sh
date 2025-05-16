@@ -1,15 +1,15 @@
 #!/bin/sh -l
 
-if [ -d $INPUT_DIRECTORY ] ; then
-  cp $INPUT_DIRECTORY/* /app/src/data
-else
-  echo "$INPUT_DIRECTORY is not a valid directory"
+if [[ ! -f $INPUT_RESUME_FILE ]] ; then
+  echo "$INPUT_RESUME_FILE does not exist"
   exit 1
 fi
 
+cp $INPUT_RESUME_FILE /app
+
 cd /app
 
-yarn build
+poetry run python resume_generator /app/$INPUT_RESUME_FILE
 
 git config --global --add safe.directory /github/workspace
 git config --global user.email r3ck.dev@gmail.com
@@ -20,7 +20,7 @@ cd /github/workspace
 git checkout --orphan gh-pages
 git rm -rf .
 
-cp -r /app/dist/* ./
+cp -r /app/output/* ./
 
 if [ $INPUT_CNAME ] ; then
   echo "Writing CNAME to file: $INPUT_CNAME"
