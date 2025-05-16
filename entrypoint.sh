@@ -9,7 +9,7 @@ cp $INPUT_RESUME_FILE /app
 
 cd /app
 
-poetry run python resume_generator /app/$INPUT_RESUME_FILE
+/app/.venv/bin/python resume_generator /app/$INPUT_RESUME_FILE
 
 git config --global --add safe.directory /github/workspace
 git config --global user.email r3ck.dev@gmail.com
